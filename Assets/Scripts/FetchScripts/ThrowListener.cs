@@ -6,7 +6,6 @@ public class ThrowListener : MonoBehaviour
 {
     private void Start()
     {
-        Debug.Log("Throw!");
         randomStart(); // random throw ball
     }
 

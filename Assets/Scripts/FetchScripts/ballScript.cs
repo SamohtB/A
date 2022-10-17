@@ -6,7 +6,6 @@ public class ballScript : MonoBehaviour
 {
     bool OnGround = false;
     private Rigidbody ballRigidbody;
-    private bool ballStop = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,16 +16,30 @@ public class ballScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.collider.CompareTag("Floor"))
+        if (OnGround == true)
         {
             Debug.Log("stopping");
             ballRigidbody.velocity = Vector3.zero;
             ballRigidbody.angularVelocity = Vector3.zero;
         }
+
+        if (gameObject.transform.position.y < -1)
+        {
+            gameObject.transform.position = new Vector3(0, 2f, 0);
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Floor"))
+        {
+            OnGround = true;
+            gameObject.transform.rotation = Quaternion.identity;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        Debug.Log("Not on Ground");
+        OnGround = false;
     }
 }
