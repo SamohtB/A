@@ -17,6 +17,7 @@ public class EventNames {
 	{
 		public const string ON_GAME_START = "ON_GAME_START";
 		public const string ON_RANDOM_START = "ON_RANDOM_START";
+		public const string ON_DISPLAY_TIME = "ON_DISPLAY_TIME";
 	}
 
 

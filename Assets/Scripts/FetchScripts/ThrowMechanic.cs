@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
+
 public class ThrowMechanic : MonoBehaviour
 {
     [SerializeField] private GameObject ball;
@@ -16,12 +17,13 @@ public class ThrowMechanic : MonoBehaviour
         EventBroadcaster.Instance.AddObserver(FetchNames.ON_GAME_START, this.throwBall);
         EventBroadcaster.Instance.AddObserver(FetchNames.ON_RANDOM_START, this.randomThrow);
         ballRigidbody = ball.GetComponent<Rigidbody>();
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        ballRigidbody = ball.GetComponent<Rigidbody>();
 
     }
 
