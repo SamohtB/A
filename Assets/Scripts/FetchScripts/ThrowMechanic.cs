@@ -7,55 +7,33 @@ using UnityEngine;
 public class ThrowMechanic : MonoBehaviour
 {
     [SerializeField] private GameObject ball;
-    [SerializeField] private Vector3 manualThrow;
-    [SerializeField] private Vector3 minRandomThrow;
-    [SerializeField] private Vector3 maxRandomThrow;
     private Rigidbody ballRigidbody;
 
     private void Awake()
     {
-        EventBroadcaster.Instance.AddObserver(FetchNames.ON_GAME_START, this.throwBall);
-        EventBroadcaster.Instance.AddObserver(FetchNames.ON_RANDOM_START, this.randomThrow);
         ballRigidbody = ball.GetComponent<Rigidbody>();
-
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        ballRigidbody = ball.GetComponent<Rigidbody>();
-
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        EventBroadcaster.Instance.AddObserver(FetchNames.ON_GAME_START, this.throwBall);
-        EventBroadcaster.Instance.AddObserver(FetchNames.ON_RANDOM_START, this.randomThrow);
-        ballRigidbody = ball.GetComponent<Rigidbody>();
+        EventBroadcaster.Instance.AddObserver(FetchNames.THROW_BALL, this.ThrowBall);
     }
 
     private void OnDestroy()
     {
-        EventBroadcaster.Instance.RemoveObserver(FetchNames.ON_GAME_START);
-        EventBroadcaster.Instance.RemoveObserver(FetchNames.ON_RANDOM_START);
+        EventBroadcaster.Instance.RemoveObserver(FetchNames.THROW_BALL);
     }
 
-    private void throwBall()
+    private void ThrowBall(Parameters param)
     {
-        ballRigidbody.AddForce(manualThrow, ForceMode.Force);
-    }
+        
+        Vector3 force = new Vector3(param.GetFloatExtra(FetchNames.THROW_FORCE_X, 10),
+                                    param.GetFloatExtra(FetchNames.THROW_FORCE_Y, 10),
+                                    param.GetFloatExtra(FetchNames.THROW_FORCE_Z, 10));
 
-    private void randomThrow()
-    {
-        Vector3 randVector = new Vector3(Random.Range(
-                                            minRandomThrow.x, maxRandomThrow.x),
-                                          Random.Range(
-                                            minRandomThrow.y, maxRandomThrow.y),
-                                          Random.Range(
-                                              minRandomThrow.z, maxRandomThrow.z));
-        ballRigidbody.AddForce(randVector);
+        ballRigidbody.AddForce(force, ForceMode.Force);
+        Debug.Log("Ball Thrown! Force = (" + force.x + ", " +
+                force.y + ", " + force.z + ")");
     }
 
 }

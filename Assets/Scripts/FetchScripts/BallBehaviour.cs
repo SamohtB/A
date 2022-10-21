@@ -9,12 +9,6 @@ public class BallBehaviour : MonoBehaviour
     private bool Found = false;
     float currTime = 0; 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-         
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -32,7 +26,7 @@ public class BallBehaviour : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player")  && !Found)
+        if (collision.gameObject.name == FetchNames.PLAYER  && !Found)
         {
             //Call Event BroadCasting 
             Debug.Log("You hit it");
