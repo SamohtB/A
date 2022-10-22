@@ -256,7 +256,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4785317379479833797}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8003449382662667173}
+        m_TargetAssemblyTypeName: ButtonListeners, Assembly-CSharp
+        m_MethodName: QuitPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4785317379761505402
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +307,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 640, y: -300}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 145.73, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4785317379761505406
 CanvasRenderer:
@@ -430,6 +442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4785317380020176315}
   - component: {fileID: 4785317380020176314}
+  - component: {fileID: 8003449382662667173}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -486,6 +499,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &8003449382662667173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4785317380020176312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 248a8782dc584de449265478f99f9c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4785317380303282078
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,7 +733,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4785317380746574264}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8003449382662667173}
+        m_TargetAssemblyTypeName: ButtonListeners, Assembly-CSharp
+        m_MethodName: RetryPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4785317380788668771
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,7 +1002,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4785317380878801510}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8003449382662667173}
+        m_TargetAssemblyTypeName: ButtonListeners, Assembly-CSharp
+        m_MethodName: MainMenuPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4785317381014343481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4785317381019189975}
   - component: {fileID: 4785317381019189972}
+  - component: {fileID: 7220029080996087562}
   m_Layer: 5
   m_Name: WinBanner
   m_TagString: Untagged
@@ -1167,6 +1217,22 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &7220029080996087562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4785317381019189973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c58b9e6e75f194786c90be43c5ee1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  dropDown: {fileID: 0}
+  backyard: {fileID: 0}
+  warehouse: {fileID: 0}
 --- !u!1 &4785317381307104035
 GameObject:
   m_ObjectHideFlags: 0

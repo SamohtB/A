@@ -34,9 +34,9 @@ public class BallBehaviour : MonoBehaviour
             Found = true;
 
             Parameters parameters = new Parameters();
-            parameters.PutExtra(EventNames.FetchEvents.ON_DISPLAY_TIME, currTime.ToString());
+            parameters.PutExtra(FetchNames.ON_DISPLAY_TIME, currTime.ToString());
           
-            EventBroadcaster.Instance.PostEvent(EventNames.FetchEvents.ON_DISPLAY_TIME, parameters);
+            EventBroadcaster.Instance.PostEvent(FetchNames.ON_DISPLAY_TIME, parameters);
             
         }
     }
