@@ -484,7 +484,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-281632
+  m_Name: pb_Mesh-62518
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -875,7 +875,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-281584
+  m_Name: pb_Mesh-62470
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1236,7 +1236,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-281616
+  m_Name: pb_Mesh-62502
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2006,7 +2006,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-281600
+  m_Name: pb_Mesh-62486
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2524,6 +2524,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 492945409, guid: 99fd4d9d837bc1040a52b34759220c31, type: 3}
+      propertyPath: appliedForce.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 492945409, guid: 99fd4d9d837bc1040a52b34759220c31, type: 3}
+      propertyPath: forceMultiplier
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 492945412, guid: 99fd4d9d837bc1040a52b34759220c31, type: 3}
       propertyPath: m_Size.y
       value: 2.8929732
