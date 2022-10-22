@@ -20,7 +20,6 @@ public class UIScript : MonoBehaviour
         EventBroadcaster.Instance.AddObserver(FetchNames.RETRY_PRESSED, this.OnPressRetry);
         EventBroadcaster.Instance.AddObserver(FetchNames.MAINMENU_PRESSED, this.OnPressMain);
         EventBroadcaster.Instance.AddObserver(FetchNames.LEVEL_SELECT, this.LevelSelect);
-
     }
 
     private void OnDestroy()

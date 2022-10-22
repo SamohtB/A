@@ -5,7 +5,23 @@ using TMPro;
 
 public class AlterName : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private GameObject timer;
+    private bool Found = false;
+    float currTime = 0;
+    // Update is called once per frame
+    void Update()
+    {
+        TimeUpdate();
+    }
+
+    void TimeUpdate()
+    {
+        if (!Found)
+        {
+            currTime += Time.deltaTime;
+            //Debug.Log($"Time: {currTime.ToString()  }");
+        }
+    }
     private void Awake()
     {
         EventBroadcaster.Instance.AddObserver(FetchNames.ON_DISPLAY_TIME, this.dispalyTime);
@@ -16,16 +32,16 @@ public class AlterName : MonoBehaviour
         EventBroadcaster.Instance.RemoveObserver(FetchNames.ON_DISPLAY_TIME);
     }
 
-    public void dispalyTime(Parameters parameters)
+    public void dispalyTime()
     {
+        Found = true;
         //Accept Input as Time
-        string time = parameters.GetStringExtra(FetchNames.ON_DISPLAY_TIME, "time");
 
-        Debug.Log($"Time: {time}");
+        Debug.Log($"Time: {currTime}");
 
-        TextMeshProUGUI text = this.GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI text = timer.GetComponent<TextMeshProUGUI>();
 
-        text.SetText("Time: " + time);
+        text.SetText("Time: " + currTime);
         
 
     }

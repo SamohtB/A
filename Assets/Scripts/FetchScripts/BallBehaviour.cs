@@ -2,42 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Security.Cryptography;
 
 public class BallBehaviour : MonoBehaviour
 {
-    [SerializeField] GameObject winBanner;
-    private bool Found = false;
-    float currTime = 0; 
+    [SerializeField] private GameObject winBanner;
+    [SerializeField] private GameObject text;
+    
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        TimeUpdate();
+        Debug.Log("DISPLAY");
+        text.SetActive(true);
+        StartCoroutine(Hide());
     }
 
-    void TimeUpdate()
+    IEnumerator Hide()
     {
-        if (!Found)
-        {
-            currTime += Time.deltaTime;
-            //Debug.Log($"Time: {currTime.ToString()  }");
-        }
+        yield return new WaitForSecondsRealtime(3.0f);
+        Debug.Log("HIDE");
+        text.SetActive(false);
     }
-
-    private void OnCollisionEnter(Collision collision)
+    
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.name == FetchNames.PLAYER  && !Found)
+        if (other.name == FetchNames.PLAYER)
         {
             //Call Event BroadCasting 
-            Debug.Log("You hit it");
             winBanner.SetActive(true);
-            Found = true;
-
-            Parameters parameters = new Parameters();
-            parameters.PutExtra(FetchNames.ON_DISPLAY_TIME, currTime.ToString());
-          
-            EventBroadcaster.Instance.PostEvent(FetchNames.ON_DISPLAY_TIME, parameters);
-            
+            EventBroadcaster.Instance.PostEvent(FetchNames.ON_DISPLAY_TIME);
         }
     }
+    
 }
