@@ -6,10 +6,10 @@ public class RandomStartListener : MonoBehaviour
 {
     [SerializeField] private Vector3 minRandomThrow;
     [SerializeField] private Vector3 maxRandomThrow;
+    Parameters throwforce = new Parameters();
 
     private void Start()
     {
-        Parameters throwforce = new Parameters();
         Vector3 force = new Vector3();
         force.x = Random.Range(minRandomThrow.x, maxRandomThrow.x);
         force.y = Random.Range(minRandomThrow.y, maxRandomThrow.y);
@@ -18,8 +18,18 @@ public class RandomStartListener : MonoBehaviour
         throwforce.PutExtra(FetchNames.THROW_FORCE_X, force.x);
         throwforce.PutExtra(FetchNames.THROW_FORCE_Y, force.y);
         throwforce.PutExtra(FetchNames.THROW_FORCE_Z, force.z);
+    }
 
-        EventBroadcaster.Instance.PostEvent(FetchNames.THROW_BALL, throwforce);
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        /* if player is detected, throw ball */
+        if (other.name == FetchNames.PLAYER)
+        { 
+            EventBroadcaster.Instance.PostEvent(FetchNames.THROW_BALL, throwforce);
+            this.gameObject.SetActive(false);
+        }
     }
 
 }
