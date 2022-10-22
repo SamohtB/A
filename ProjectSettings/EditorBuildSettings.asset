@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Fetch!/BackyardLevel.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Fetch!/WarehouseScene.unity
+    path: Assets/Scenes/Fetch!/WarehouseLevel.unity
     guid: 72fd3a813b7428a46ad612e37a711f4b
   m_configObjects: {}
