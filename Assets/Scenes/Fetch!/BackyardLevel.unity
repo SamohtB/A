@@ -566,7 +566,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &829344092
 GameObject:
@@ -634,7 +634,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &871156634
 Mesh:
@@ -1653,7 +1653,7 @@ PrefabInstance:
     - target: {fileID: 174841632439066126, guid: 282d91a4b0247a64c98f63bb154ca705, type: 3}
       propertyPath: targetContainer
       value: 
-      objectReference: {fileID: 603731178}
+      objectReference: {fileID: 487002045877144511}
     - target: {fileID: 5602071025318599380, guid: 282d91a4b0247a64c98f63bb154ca705, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1714,7 +1714,7 @@ PrefabInstance:
     - target: {fileID: 487002044807135819, guid: 06002531fb0990640b7b25d22e2d557c, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 1272774019}
+      objectReference: {fileID: 6512719815998123224}
     - target: {fileID: 487002044807135819, guid: 06002531fb0990640b7b25d22e2d557c, type: 3}
       propertyPath: winBanner
       value: 
@@ -1722,7 +1722,7 @@ PrefabInstance:
     - target: {fileID: 487002045580954142, guid: 06002531fb0990640b7b25d22e2d557c, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 1272774019}
+      objectReference: {fileID: 6512719815998123224}
     - target: {fileID: 487002045580954142, guid: 06002531fb0990640b7b25d22e2d557c, type: 3}
       propertyPath: winBanner
       value: 
@@ -1778,13 +1778,18 @@ PrefabInstance:
     - target: {fileID: 487002046683455787, guid: 06002531fb0990640b7b25d22e2d557c, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 1272774019}
+      objectReference: {fileID: 6512719815998123224}
     - target: {fileID: 487002046683455787, guid: 06002531fb0990640b7b25d22e2d557c, type: 3}
       propertyPath: winBanner
       value: 
       objectReference: {fileID: 4785317380281474661}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06002531fb0990640b7b25d22e2d557c, type: 3}
+--- !u!1 &487002045877144511 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 487002046434213716, guid: 06002531fb0990640b7b25d22e2d557c, type: 3}
+  m_PrefabInstance: {fileID: 487002045877144510}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4785317380281474661 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1731925320184443570, guid: f48bfc2e5bf92724bbc961159f28c53b, type: 3}
@@ -1960,7 +1965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1731925321412063221, guid: f48bfc2e5bf92724bbc961159f28c53b, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1731925321412063221, guid: f48bfc2e5bf92724bbc961159f28c53b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2040,3 +2045,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f48bfc2e5bf92724bbc961159f28c53b, type: 3}
+--- !u!1 &6512719815998123224 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6512719817201144148, guid: f48bfc2e5bf92724bbc961159f28c53b, type: 3}
+  m_PrefabInstance: {fileID: 6512719815998123223}
+  m_PrefabAsset: {fileID: 0}
