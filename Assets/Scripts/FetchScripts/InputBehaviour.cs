@@ -15,7 +15,7 @@ public class InputBehaviour : MonoBehaviour
 
     private float currTime;
     private Transform transformObj;
-    private Rigidbody rigidbody;
+    private new Rigidbody rigidbody;
 
     private bool isOnGround = true;
 
